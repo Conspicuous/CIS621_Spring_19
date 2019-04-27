@@ -1,0 +1,53 @@
+header{
+    text-align: center;
+    font-family: Times, sans-serif;
+    font-size: xx-large;
+
+}
+
+table{
+    font-family: Arial, sans-serif;
+    border: 1px Solid Black;
+    border-collapse: collapse;
+
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+
+}
+
+th{background-color: lightslategrey; text-align: center}
+
+tr:nth-child(even) {
+    background-color: #dddddd;}
+
+
+.TestingButton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.TestingButton:hover {
+    background-color: green;
+}
+
+
+*{
+
+    background: #42b6f4;
+
+}
+
+
+.indent{
+    padding-left: 1.9em;
+}
+

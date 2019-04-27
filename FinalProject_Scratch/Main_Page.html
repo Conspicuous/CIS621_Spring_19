@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOS Data Run-To-Run Comparison</title>
+    <link rel="stylesheet" href="Main_Page_Style.css">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+            crossorigin="anonymous"></script>
+    <!-- JQUERY UI  -->
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="Main_Controller.js"></script>
+
+    <!--integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"-->
+    <!--crossorigin="anonymous"></script>-->
+</head>
+<header>MOS Data Picker</header>
+<body>
+
+<aside>
+
+</aside>
+<main class="main">
+
+
+
+
+    <div style="height: 200px;">
+        <input id="SitePicker" type="text"/><br /><br />
+
+    </div>
+    <div class="Current_Run">
+        <h2>Current Run [DATE/TIME]</h2>
+        <table style="width: 60%;" border="3">
+
+            <tr id="Data_Table_Headings">
+
+                <th>High Temp</th> <!--future these need to be editible too and display as needed-->
+                <th>Low Temp</th>
+                <th>Wind Speed</th>
+                <th>Wind Direction</th>
+                <th>Cloud Cover</th>
+                <th>POP 12</th>
+                <th>QPF 12</th>
+            </tr>
+            <tr id="Current_Run_Data">
+                <td id="high_temp" class="data previous_run">72 F</td>
+                <td id="low_temp" class="data previous_run">61 F</td>
+                <td id="wnd_speed" class="data previous_run">15 KNOTS</td>
+                <td id="wnd_dir" class="data previous_run">270 (W)</td>
+                <td id="cld_cvr" class="data previous_run">Scattered</td>
+                <td id="POP12" class="data previous_run">15</td>
+                <td id="QPF12" class="data previous_run">0</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <div>   <h3>Current Conditions at KPHL </h3></div>s
+
+
+
+
+
+
+    <button type="submit" class="dumbo">Change My Data</button>
+    <button type="submit" class="">Trend Plotter</button>
+
+</main>
+
+
+
+
+
+</body>
+</html>

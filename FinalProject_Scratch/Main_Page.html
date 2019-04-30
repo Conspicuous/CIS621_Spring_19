@@ -5,8 +5,10 @@
     <title>MOS Data Run-To-Run Comparison</title>
     <link rel="stylesheet" href="Main_Page_Style.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-            integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+    <link rel="stylesheet" href="jquery_ui_1121_humanity.css">
+    <script
+            src="https://code.jquery.com/jquery-3.4.0.js"
+            integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
             crossorigin="anonymous"></script>
     <!-- JQUERY UI  -->
     <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
@@ -18,16 +20,12 @@
 <header>MOS Data Picker</header>
 <body>
 
-<aside>
-
-</aside>
 <main class="main">
 
 
 
 
     <div style="height: 200px;">
-        <input id="SitePicker" type="text"/><br /><br />
 
     </div>
     <div class="Current_Run">
@@ -61,12 +59,23 @@
     <div>   <h3>Current Conditions at KPHL </h3></div>s
 
 
+    <div>
+        <form id="Entry Variable Selection" name="wx_data_selection_form">
+            <label for="SitePicker">Site Selection:</label><br>
+            <input id="SitePicker" type="text" class="ui-autocomplete"/><br /><br />
+
+        </form>
 
 
+    </div>
 
-
+<div>
     <button type="submit" class="dumbo">Change My Data</button>
     <button type="submit" class="">Trend Plotter</button>
+
+
+
+</div>
 
 </main>
 
@@ -76,3 +85,5 @@
 
 </body>
 </html>
+
+<!--TODO: https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API-->

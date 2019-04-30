@@ -21,43 +21,20 @@ $(function () {
     $("#QPF12").text(dummy_Conditions.qpf12);
 
 
-    alert("hello");
-//
-// $("#SitePicker").autocomplete(
-//     { source: var Sites=["KPHL","KBOS","PANC"]
-//
-//
-//
-//     }
-//
-//
-// })
-
-    var availableTags = [
-        "ActionScript",
-        "AppleScript",
-        "Asp",
-        "BASIC",
-        "C",
-        "C++",
-        "Clojure",
-        "COBOL",
-        "ColdFusion",
-        "Erlang",
-        "Fortran",
-        "Groovy",
-        "Haskell",
-        "Java",
-        "JavaScript",
-        "Lisp",
-        "Perl",
-        "PHP",
-        "Python",
-        "Ruby",
-        "Scala",
-        "Scheme"
-    ];
-    $("#SitePicker").autocomplete({
-        source: availableTags
+    $.ajax({
+        url: "SiteListMOS.txt",
+        dataType: "text",
+        success: function(data) {
+            var autoCompleteData = data.split('\n');
+            $("#SitePicker").autocomplete({
+                source: function(request, response) {
+                    var results = $.ui.autocomplete.filter(autoCompleteData, request.term);
+                    response(results.slice(0, 5)); // Display the first 5 results
+                    $("#SitePicker").value(response); //Plug the value for the response
+                }
+            });
+        }
     });
+
+
 });

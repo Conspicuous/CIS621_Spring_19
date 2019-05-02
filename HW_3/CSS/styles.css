@@ -47,3 +47,11 @@ p{
     position: center;
 
 }
+
+.required{
+
+}
+
+.hidden{
+    display: none;
+}

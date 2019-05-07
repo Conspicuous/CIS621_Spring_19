@@ -5,14 +5,15 @@
     <title>MOS Data Run-To-Run Comparison</title>
     <link rel="stylesheet" href="Main_Page_Style.css">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
-    <link rel="stylesheet" href="jquery_ui_1121_humanity.css">
+    <link href="jquery_ui_1121_humanity.css" rel="stylesheet">
     <script
-            src="https://code.jquery.com/jquery-3.4.0.js"
             integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo="
+            src="https://code.jquery.com/jquery-3.4.0.js"
             crossorigin="anonymous"></script>
     <!-- JQUERY UI  -->
-    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="Main_Controller.js"></script>
+    <!--<script src="Hard_Coded_MOS_Data_File.js"></script>-->
 
     <!--integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"-->
     <!--crossorigin="anonymous"></script>-->
@@ -23,65 +24,214 @@
 <main class="main">
 
 
-
-
     <div style="height: 200px;">
 
     </div>
-    <div class="Current_Run">
-        <h2>Current Run [DATE/TIME]</h2>
-        <table style="width: 60%;" border="3">
 
-            <tr id="Data_Table_Headings">
+    <div id="accordion">
+        <h3 id="CurrRun_Text">Current Run: May 1st, 2019, 12Z</h3>
+        <div class="Current_Run" id="Current_Run">
 
-                <th>High Temp</th> <!--future these need to be editible too and display as needed-->
-                <th>Low Temp</th>
-                <th>Wind Speed</th>
-                <th>Wind Direction</th>
-                <th>Cloud Cover</th>
-                <th>POP 12</th>
-                <th>QPF 12</th>
-            </tr>
-            <tr id="Current_Run_Data">
-                <td id="high_temp" class="data previous_run">72 F</td>
-                <td id="low_temp" class="data previous_run">61 F</td>
-                <td id="wnd_speed" class="data previous_run">15 KNOTS</td>
-                <td id="wnd_dir" class="data previous_run">270 (W)</td>
-                <td id="cld_cvr" class="data previous_run">Scattered</td>
-                <td id="POP12" class="data previous_run">15</td>
-                <td id="QPF12" class="data previous_run">0</td>
-            </tr>
+            <div>
+                <table id="Single_Run_Table">
 
-        </table>
+                    <!--<thead>-->
+                    <!--<tr id="dates">-->
+                    <!--<th>5/5/2019</th>-->
+                    <!--<th>High</th>-->
+                    <!--<th>Low</th>-->
+                    <!--<th>Day Wind (K)</th>-->
+                    <!--<th>Wind Dir</th>-->
+                    <!--<th>QPF24</th>-->
+                    <!--<th>POP24</th>-->
+                    <!--</tr>-->
+                    <!--</thead>-->
+                    <!--<tbody>-->
+                    <!--<tr>-->
+                    <!--<td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
+                    <!--<tr>-->
+                    <!--<td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
+                    <!--<tr>-->
+                    <!--<td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
+                    <!--<tr>-->
+                    <!--<td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
+                    <!--<tr>-->
+                    <!--<td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
+                    <!--<tr>-->
+                    <!--<td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
+                    <!--<tr>-->
+                    <!--<td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
+                    <!--<tr>-->
+                    <!--<td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>-->
+                    <!--</tbody>-->
+                    <!--</tr>-->
+                </table>
+                <!--<table style="width: 60%;" border="3">-->
+
+
+                <!--<tr id="Data_Table_Headings">-->
+                <!--<th>Variable Header</th>-->
+                <!--<th>May 2nd 00Z</th> &lt;!&ndash;future these need to be editible too and display as needed&ndash;&gt;-->
+                <!--<th>May 2nd 12Z</th>-->
+                <!--<th>May 3rd 00Z</th>-->
+                <!--<th>May 3rd 12Z</th>-->
+                <!--<th>May 4th 00Zr</th>-->
+                <!--<th>May 4th 12Z</th>-->
+                <!--<th>May 5th 00Z</th>-->
+                <!--<th>May 5th 12Z</th>-->
+                <!--<th>May 5th 00Z</th>-->
+                <!--<th>May 5th 12Z</th>-->
+                <!--<th>May 6th 00Z</th>-->
+                <!--<th>May 6th 12Z</th>-->
+                <!--<th>May 7th 00Z</th>-->
+                <!--<th>May 7th 12Z</th>-->
+                <!--<th>May 8th 00Z</th>-->
+                <!--<th>May 8th 12Z</th>-->
+                <!--<th>May 9th 00Z</th>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>High Temperature</td>-->
+                <!--<td>65</td>-->
+                <!--<td></td>-->
+                <!--<td>71</td>-->
+                <!--<td></td>-->
+                <!--<td>67</td>-->
+                <!--<td></td>-->
+                <!--<td>65</td>-->
+                <!--<td></td>-->
+                <!--<td>71</td>-->
+                <!--<td></td>-->
+                <!--<td>67</td>-->
+                <!--<td></td>-->
+                <!--<td>71</td>-->
+                <!--<td></td>-->
+                <!--<td>67</td>-->
+                <!--<td></td>-->
+                <!--<td>70</td>-->
+
+
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>Low Temperature</td>-->
+                <!--<td></td>-->
+                <!--<td>67</td>-->
+                <!--<td></td>-->
+                <!--<td>65</td>-->
+                <!--<td></td>-->
+                <!--<td>71</td>-->
+                <!--<td></td>-->
+                <!--<td>67</td>-->
+                <!--<td></td>-->
+                <!--<td>65</td>-->
+                <!--<td></td>-->
+                <!--<td>71</td>-->
+                <!--<td></td>-->
+                <!--<td>65</td>-->
+                <!--<td></td>-->
+                <!--<td>71</td>-->
+                <!--<td></td>-->
+                <!--</tr>-->
+
+                <!--<tr>-->
+                <!--<td>Wind Speed</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--<td>15</td>-->
+                <!--</tr>-->
+
+                <!--<tr>-->
+                <!--<td>Wind Direction</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>POP 12</td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--<td>QPF 12</td>-->
+                <!--</tr>-->
+                <!--<tr id="Current_Run_Data">-->
+                <!--<td id="high_temp" class="data previous_run">72 F</td>-->
+                <!--<td id="low_temp" class="data previous_run">61 F</td>-->
+                <!--<td id="wnd_speed" class="data previous_run">15 KNOTS</td>-->
+                <!--<td id="wnd_dir" class="data previous_run">270 (W)</td>-->
+                <!--<td id="cld_cvr" class="data previous_run">Scattered</td>-->
+                <!--<td id="POP12" class="data previous_run">15</td>-->
+                <!--<td id="QPF12" class="data previous_run">0</td>-->
+                <!--</tr>-->
+
+                <!--</table>-->
+            </div>
+
+
+        </div>
+
+        <!--<div>-->
+        <!--<button>My Button</button>-->
+
+
+        <!--</div>-->
+
+        <h3>Run Comparison </h3>
+        <div>
+            <p> "Operators are Standing By" </p>
+        </div>
+
+
+        <!--<h3>Buttons</h3>-->
+        <!--<div>-->
+        <!--<button type="submit" class="dumbo">Change My Data</button>-->
+        <!--<button type="submit" class="">Trend Plotter</button>-->
+
 
     </div>
 
-    <div>   <h3>Current Conditions at KPHL </h3></div>s
-
-
-    <div>
-        <form id="Entry Variable Selection" name="wx_data_selection_form">
-            <label for="SitePicker">Site Selection:</label><br>
-            <input id="SitePicker" type="text" class="ui-autocomplete"/><br /><br />
-
-        </form>
-
-
     </div>
 
-<div>
-    <button type="submit" class="dumbo">Change My Data</button>
-    <button type="submit" class="">Trend Plotter</button>
 
-
-
-</div>
 
 </main>
 
+<h3>Data Selection</h3>
+<div class="ui-controlgroup">
+    <form id="Site_Picker_Form" name="wx_data_selection_form">
+        <fieldset> <label for="SitePicker">Site Selection:</label><br>
+            <input class="ui-autocomplete" id="SitePicker" type="text"/><br/><br/></fieldset>
+
+        <fieldset>
+            <legend>Tools: </legend>
+            <label for="radio-nested-1">Compare Prior Run
+                <input type="radio" name="radio-nested-1" id="radio-nested-1">
+            </label>
+            <label for="radio-nested-2">Compare Other Location
+                <input type="radio" name="radio-nested-2" id="radio-nested-2"> <br>
+            </label>
+            <label for="radio-nested-3">Trend Plotter (Single Variable)
+                <input type="radio" name="radio-nested-3" id="radio-nested-3">
+            </label>
+            <label for="radio-nested-4">Display Run (Default --> Current)
+                <input type="radio" name="radio-nested-4" id="radio-nested-4">
+            </label>
+        </fieldset>
+        <!--<label for="Request_Type">Tools:</label><br>-->
+        <!--<input class="ui-checkboxradio-radio-label" id="Request_Type" type="radio"><br>-->
+        <label for="Early_Date">Date to Compare to Present: </label><br>
+        <input id="Early_Date" name="Early_Date" type="text"><br>
+    </form>
 
 
-
+</div>
 
 </body>
 </html>

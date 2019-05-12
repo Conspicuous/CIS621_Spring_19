@@ -51,11 +51,12 @@ class MEX_MOS extends MOS_Run_Data {
     }
 
     show() {
-        alert(this.h_temp)
+        alert("The Date Is: " +this.date.toString());
     };
 
     generateFauxValues() { // Create Randomized MOS data for every instance uniquely!
         //alert("Hello");
+
 
 
         for (let i = 1; i < 8; i++) { // for days tomorrow through 7..
@@ -67,7 +68,7 @@ class MEX_MOS extends MOS_Run_Data {
             this.QPF24.push(Math.round(Math.random() * (+5 - +0)));
         }
 
-        this.l_temp.push(49); //for 8th low temp (12z run), just make 49 to verify output.
+        //this.l_temp.push(49); //for 8th low temp (12z run), just make 49 to verify output.
 
 
     }; //End MEX_MOS

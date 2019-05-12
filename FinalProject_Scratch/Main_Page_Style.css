@@ -4,6 +4,9 @@ header{
     font-size: xx-large;
 
 }
+body{
+    background-color: #42b6f4;
+}
 
 table.topazCells {
     /*from : https://divtable.com/table-styler/*/
@@ -31,7 +34,7 @@ table.topazCells tr:nth-child(even) {
 }
 
 table.topazCells td:nth-child(even) {
-    background: #D58078;
+    background: #d5cfc1;
 }
 
 table.topazCells thead {
@@ -58,11 +61,11 @@ table.topazCells tfoot td {
     font-size: 13px;
 }
 
-table.topazCells tfoot .links {
+table.topazCells tfoot .links table {
     text-align: right;
 }
 
-table.topazCells tfoot .links a {
+table.topazCells tfoot .links a table {
     display: inline-block;
     background: #FFFFFF;
     color: #A43152;
@@ -98,14 +101,19 @@ tr:nth-child(even) {
 }
 
 
-*{
+/**{*/
 
-    background: #42b6f4;
+    /*background: #42b6f4;*/
 
-}
+/*}*/
 
 
 .indent{
     padding-left: 1.9em;
 }
 
+span {
+    color: red;
+    font-size: 87.5%;
+    margin-left: .5em;
+}
